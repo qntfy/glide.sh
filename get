@@ -4,7 +4,7 @@
 # See https://github.com/Masterminds/glide/blob/master/LICENSE for more details.
 
 # To run this script execute:
-#   `curl https://glide.sh/get | sh`
+#   `curl https://getglide.sh/get | sh`
 
 PROJECT_NAME="glide"
 
@@ -64,9 +64,9 @@ initOS() {
 
 downloadFile() {
 	if type "curl" > /dev/null; then
-		TAG=$(curl -s https://glide.sh/version)
+		TAG=$(curl -s https://getglide.sh/version)
 	elif type "wget" > /dev/null; then
-		TAG=$(wget -q -O - https://glide.sh/version)
+		TAG=$(wget -q -O - https://getglide.sh/version)
 	fi
 	LATEST_RELEASE_URL="https://api.github.com/repos/Masterminds/$PROJECT_NAME/releases/tags/$TAG"
 	if type "curl" > /dev/null; then
